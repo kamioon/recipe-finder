@@ -1,0 +1,27 @@
+{
+  "name": "kamioon/cookie",
+  "description": "a milk-dunking cookie recipe creator",
+  "type": "project",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Kamran Azari",
+      "email": "kamran@azari.info"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.1",
+    "ext-json": "*",
+    "psr/log": "@stable",
+    "vlucas/phpdotenv": "@stable",
+    "php-di/php-di": "@stable",
+    "symfony/console": "@stable"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "@stable"
+  },
+  "scripts": {
+    "start": "php -S localhost:8080 -t Src Infrastructure/router.php"
+  }
+}
