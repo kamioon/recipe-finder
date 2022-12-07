@@ -16,12 +16,13 @@
     "psr/log": "@stable",
     "vlucas/phpdotenv": "@stable",
     "php-di/php-di": "@stable",
-    "symfony/console": "@stable"
+    "symfony/console": "@stable",
+    "php-units-of-measure/php-units-of-measure": "^2.1"
   },
   "require-dev": {
     "phpunit/phpunit": "@stable"
   },
   "scripts": {
-    "start": "php -S localhost:8080 -t Src Infrastructure/router.php"
+    "start": "php -S localhost:8080 -t Src Application/router.php"
   }
 }
