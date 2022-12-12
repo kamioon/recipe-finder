@@ -47,16 +47,16 @@ you can find some unit tests in the `/tests` directory. to run them
 
 ## Structure
 
-a simple symfony console app create in ``bin/run.php`` file. it uses a command in
+a simple symfony console app is created in the ``bin/run.php`` file. it uses a command in
 ``src/Console/FindRecipeCommand.php``. the initialization of data placed there. so if we want a new ingredient we can
 add there.
 
 ### Ingredient
 
-to create an ingredient you can use
+to create an ingredient you can use:
 
 ```php
- $ingredient = new Ingredient(
+    $ingredient = new Ingredient(
                     new Name("Cinnamon"),
                     new Capacity(2),
                     new Durability(3),
@@ -69,21 +69,19 @@ to create an ingredient you can use
 to add Quantity to the ingredient, first need a Measurement:
 
 ```php
-$measurement = new Measurement(44, UnitVolume::teaspoons())
-```
+    $measurement = new Measurement(44, UnitVolume::teaspoons())
 
-```php
     $ingredientQuantity = new IngredientQuantity(
                 $ingredient,
                 $measurement
             );
 ```
 
-then we can put some amount of ingredients into a container (here a bowl). a bowl should have a capacity. in this test
-we set it 100 tea-spoon.
+then we can put some amount of ingredients into a container (here a bowl). the bowl should have a capacity. in this test
+we set it 100 tea-spoon. but it's totally adjustable.
 
 ```php
- $bowl = new Bowl(
+    $bowl = new Bowl(
             new Measurement(100, UnitVolume::teaspoons()
             $ingredientQuantity
             );
@@ -99,3 +97,5 @@ to find out the score of the bowl. Just put the bowl in to calculator:
         $score = $calculator->getScore();
 
 ```
+
+To find out the best recipe check out the ``src/Console/FindRecipeCommand.php`` file.
