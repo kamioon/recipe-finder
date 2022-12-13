@@ -22,9 +22,6 @@
   "require-dev": {
     "phpunit/phpunit": "@stable"
   },
-  "scripts": {
-    "start": "php -S localhost:8080 -t Src src/app.php"
-  },
   "autoload": {
     "psr-4": {
       "App\\": "src/",
